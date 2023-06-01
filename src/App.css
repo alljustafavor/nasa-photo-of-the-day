@@ -1,32 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+/* font-family: 'Ubuntu Mono', monospace; */
+
 .header-logo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
-.header-logo, h1 {
+.header-logo, h1, p {
   padding: 0;
+  margin: 0;
   align-self: center;
+  font-family: 'Ubuntu Mono', monospace;
+  z-index: 1;
+  color: white;
+}
+
+.black-logo-cir {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 35.3%, rgba(0,0,0,1) 15%);
+  z-index: 0;
+  position: absolute;
 }
 
 .hero-img-container {
-  margin: 0;
-  padding: 0;
-  position: relative;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: row-reverse;
+  background-color: black;
 }
 
 .TodayAPOD-info {
-  position: absolute;
-
+  color: white;
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
   align-self: center;
-  color: black;
-  background-color: hsl(0,0%,50%, .6);
-  border: 2px solid blue;
   border-radius: 1rem;
-  padding: 2rem 2rem;
+  padding: 5rem 5rem;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.content {
+  position: absolute;
+  left: 85vw;
+  top: 7vh;
+  border: 2px solid white;
 }
 
 .img-container {
