@@ -40,15 +40,20 @@ function RandomAPOD(props) {
                     id="end" 
                     value={endDate}
                     onChange={handleEndDateChange} />
-                <button onClick={handleSubmit} >Get Pictures</button>
+                    <div class="button-container">    
+                        <button onClick={handleSubmit} >Get Pictures</button>
+                    </div>    
                 {/* {console.log(start.value);} */}
             </div>
             <div className="img-date-container">
                 {media.map(pic => (
                     <div className="date-image">
+                        <p>{pic.title} : {pic.date}</p>
                         {pic.media_type === 'video'
-                            ? <iframe src={pic.url} title={pic.title} style={{borderRadius: "5%"}} height={'900px'} width={'1000px'} frameBorder="0" allowFullScreen />
+                            ? <iframe src={pic.url} title={pic.title} style={{borderRadius: "5%"}} height={'546px'} width={'546px'} frameBorder="0" allowFullScreen />
                             : <img src={pic.url} alt={pic.title} />}
+                            {pic.copyright? <p>&#169;{pic.copyright}</p> : <p>&#169;Public domain</p> }
+                               
                     </div>
                 ))}     
             </div>
