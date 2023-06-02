@@ -4,7 +4,7 @@ function LastThreeAPOD(props) {
 
     return (
         <div className="text">
-            <h2 className="text">Last Three Picture's of the Day</h2>
+            <h2 className="textL3">Last Three Picture's of the Day</h2>
             <div className="img-container">
                 {props.threeAPOD.map(pic => (
             <div className="image">

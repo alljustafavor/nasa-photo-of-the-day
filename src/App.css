@@ -40,13 +40,13 @@
   margin: 0 auto;
   align-self: center;
   border-radius: 1rem;
-  padding: 5rem 5rem;
+  padding: 8rem 8rem;
   font-family: 'Ubuntu Mono', monospace;
 }
 
 .content {
-  position: absolute;
-  left: 85vw;
+  position: sticky;
+  left: 100vw;
   top: 7vh;
   height: 28.125rem;
   width: 28.125rem;
@@ -63,7 +63,16 @@
   width: 100%;
   text-align: center;
   font-family: 'Ubuntu Mono', monospace;
-  margin: 4rem auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.textL3 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0 auto;
+  font-size: 2rem;
 }
 
 .image {
