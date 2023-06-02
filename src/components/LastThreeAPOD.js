@@ -9,7 +9,7 @@ function LastThreeAPOD(props) {
                 {props.threeAPOD.map(pic => (
             <div className="image">
                 {pic.media_type === 'video'
-                    ? <iframe src={pic.url} title={pic.title} style={{borderRadius: '50%'}} height={'546px'} width={'546px'} frameBorder="0" allowFullScreen />
+                    ? <iframe src={pic.url} title={pic.title} style={{borderRadius: '32px'}} height={'546px'} width={'546px'} frameBorder="0" allowFullScreen />
                     : <img src={pic.url} alt={pic.title} />}
             </div>
         ))}

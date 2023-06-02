@@ -47,7 +47,7 @@ function RandomAPOD(props) {
                 {media.map(pic => (
                     <div className="date-image">
                         {pic.media_type === 'video'
-                            ? <iframe src={pic.url} title={pic.title} style={{borderRadius: "5%"}} height={'746px'} width={'746px'} frameBorder="0" allowFullScreen />
+                            ? <iframe src={pic.url} title={pic.title} style={{borderRadius: "5%"}} height={'900px'} width={'1000px'} frameBorder="0" allowFullScreen />
                             : <img src={pic.url} alt={pic.title} />}
                     </div>
                 ))}     

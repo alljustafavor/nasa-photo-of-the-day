@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import TodayAPOD from "./components/TodayAPOD";
 import LastThreeAPOD from "./components/LastThreeAPOD";
 import RandomAPOD from "./components/RandomAPOD";
-import Footer from "./components/Footer";
 import "./App.css";
 
 
@@ -47,7 +46,6 @@ function App() {
       <TodayAPOD media_type={media.media_type} url={media.url} title={media.title} explanation={media.explanation}/>
       <LastThreeAPOD threeAPOD={threeAPOD} />
       <RandomAPOD currentDate={currentDate} API_KEY={API_KEY} BASE_URL={BASE_URL}/>
-      <Footer />
     </div>
   );
 }
