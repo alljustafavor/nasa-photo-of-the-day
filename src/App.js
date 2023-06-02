@@ -14,15 +14,12 @@ function App() {
 
   const date = new Date();
 
-  let day = date.getDate() - 1;
+  let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
 
-  let currentDate = `${year}-${month}-${day}`;
-  let currentDateMinus3 = `${year}-${month}-${day - 3}`
-
-  console.log(currentDate)
-  console.log(currentDateMinus3)
+  let currentDate = `${year}-${month - 1}-${31}`;
+  let currentDateMinus3 = `${year}-${month-1}-${31 - 2}`
 
   useEffect(() => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}`)
@@ -31,7 +28,7 @@ function App() {
       }).then(err => {
         console.error(err);
       })
-  }, [media])
+  }, [])
   useEffect(() => {
     axios.get(`${BASE_URL}?start_date=${currentDateMinus3}&end_date=${currentDate}&api_key=${API_KEY}`)
       .then(res => {
@@ -39,19 +36,16 @@ function App() {
       }).then(err => {
         console.error(err);
       })
-  }, [currentDate, currentDateMinus3, threeAPOD])
-
+  }, [currentDate, currentDateMinus3])
+  
 
 
   return (
     <div className="App">
       <Header />
       <TodayAPOD media_type={media.media_type} url={media.url} title={media.title} explanation={media.explanation}/>
-      {threeAPOD.map(pic => {
-        <LastThreeAPOD media_type={pic.media_type} url={pic.url} title={pic.title} explanation={pic.explanation}/>
-      })
-      }
-      <RandomAPOD />
+      <LastThreeAPOD threeAPOD={threeAPOD} />
+      <RandomAPOD currentDate={currentDate}/>
       
     </div>
   );
