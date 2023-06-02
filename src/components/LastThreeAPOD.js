@@ -4,17 +4,15 @@ function LastThreeAPOD(props) {
 
     return (
         <div className="text">
-            <h2>Last Three Picture's of the Day</h2>
+            <h2 className="text">Last Three Picture's of the Day</h2>
             <div className="img-container">
-                <div className="image">
-                    <img src={props.url} />
-                </div>
-                <div className="image">
-                <img src={props.url} />
-                </div>
-                <div className="image">
-                <img src={props.url} />
-                </div>
+                {props.threeAPOD.map(pic => (
+            <div className="image">
+                {pic.media_type === 'video'
+                    ? <iframe src={pic.url} title={pic.title} style={{borderRadius: '50%'}} height={'546px'} width={'546px'} frameBorder="0" allowFullScreen />
+                    : <img src={pic.url} alt={pic.title} />}
+            </div>
+        ))}
             </div>
         </div>    
     );
