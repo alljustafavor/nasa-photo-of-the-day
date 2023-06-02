@@ -3,10 +3,11 @@
 
 .header-logo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
+  color: white;
 }
 
 .header-logo, h1, p {

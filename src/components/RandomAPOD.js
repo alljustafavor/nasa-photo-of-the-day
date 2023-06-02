@@ -24,6 +24,8 @@ function RandomAPOD(props) {
               })
           }
 
+          const publicDom = '\U+1F16E'
+
     return (
         <div className="text date-container">
             <h2>Pick the Days!</h2>
@@ -52,7 +54,7 @@ function RandomAPOD(props) {
                         {pic.media_type === 'video'
                             ? <iframe src={pic.url} title={pic.title} style={{borderRadius: "5%"}} height={'546px'} width={'546px'} frameBorder="0" allowFullScreen />
                             : <img src={pic.url} alt={pic.title} />}
-                            {pic.copyright? <p>&#169;{pic.copyright}</p> : <p>&#169;Public domain</p> }
+                            {pic.copyright? <p>&#169;{pic.copyright}</p> : <p>&#127342;Public domain</p> }
                                
                     </div>
                 ))}     
