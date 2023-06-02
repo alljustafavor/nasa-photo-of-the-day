@@ -54,7 +54,7 @@ function RandomAPOD(props) {
                         {pic.media_type === 'video'
                             ? <iframe src={pic.url} title={pic.title} style={{borderRadius: "5%"}} height={'546px'} width={'546px'} frameBorder="0" allowFullScreen />
                             : <img src={pic.url} alt={pic.title} />}
-                            {pic.copyright? <p>&#169;{pic.copyright}</p> : <p>&#127342;Public domain</p> }
+                            {pic.copyright? <p><small>&#169;{pic.copyright}</small></p> : <p><small>Public domain</small></p> }
                                
                     </div>
                 ))}     
