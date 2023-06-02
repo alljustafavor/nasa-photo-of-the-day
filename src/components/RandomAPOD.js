@@ -24,7 +24,6 @@ function RandomAPOD(props) {
               })
           }
 
-          const publicDom = '\U+1F16E'
 
     return (
         <div className="text date-container">
