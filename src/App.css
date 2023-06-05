@@ -33,26 +33,7 @@
   background-color: black;
 }
 
-.TodayAPOD-info {
-  color: white;
-  height: 50%;
-  width: 50%;
-  margin: 0 auto;
-  align-self: center;
-  border-radius: 1rem;
-  padding: 8rem 8rem;
-  font-family: 'Ubuntu Mono', monospace;
-}
 
-.content {
-  position: sticky;
-  left: 100vw;
-  top: 7vh;
-  height: 28.125rem;
-  width: 28.125rem;
-  border-radius: 50%;
-  border: .125rem solid white;
-}
 
 .img-container {
   display: flex;
